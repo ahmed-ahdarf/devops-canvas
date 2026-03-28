@@ -184,7 +184,7 @@ const HeroSection = () => {
 
           <div className="p-4 md:p-6">
             {/* Pipeline stages */}
-            <div className="flex items-center justify-between mb-6 overflow-x-auto gap-1">
+            <div className="flex items-center justify-between mb-6 overflow-x-auto gap-1 px-4">
               {Object.entries(stageConfig).map(([key, cfg], i) => {
                 const Icon = cfg.icon;
                 const isActive = stageIdx >= i;
