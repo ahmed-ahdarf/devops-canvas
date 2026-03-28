@@ -169,7 +169,7 @@ const HeroSection = () => {
           className="bg-card/90 backdrop-blur-md rounded-xl border border-border overflow-hidden shadow-2xl"
         >
           {/* Terminal header */}
-          <div className="flex items-center justify-between px-4 py-2.5 bg-secondary/50 border-b border-border">
+          <div className="flex items-center justify-between px-6 py-2.5 bg-secondary/50 border-b border-border">
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 rounded-full bg-destructive/70" />
               <div className="w-3 h-3 rounded-full bg-pipeline-warning/70" />
@@ -184,7 +184,7 @@ const HeroSection = () => {
 
           <div className="p-4 md:p-6">
             {/* Pipeline stages */}
-            <div className="flex items-center justify-between mb-6 overflow-x-auto gap-1 px-4">
+            <div className="flex items-center justify-between mb-6 overflow-x-auto gap-1 px-6">
               {Object.entries(stageConfig).map(([key, cfg], i) => {
                 const Icon = cfg.icon;
                 const isActive = stageIdx >= i;
