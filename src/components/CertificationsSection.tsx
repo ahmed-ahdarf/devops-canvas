@@ -1,6 +1,10 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Award, ExternalLink } from "lucide-react";
+import ckaBadge from "@/assets/cka-badge.png";
+import terraformBadge from "@/assets/terraform-badge.png";
+import ibmBadge from "@/assets/ibm-badge.png";
+import ckadBadge from "@/assets/ckad-badge.png";
 
 const certs = [
   {
@@ -8,7 +12,7 @@ const certs = [
     issuer: "CNCF / Linux Foundation",
     color: "from-[hsl(210,90%,50%)] to-[hsl(200,80%,60%)]",
     borderHover: "hover:border-[hsl(210,90%,50%)]/50",
-    icon: "🎖️",
+    badge: ckaBadge,
     credentialId: "CKA Certified",
   },
   {
@@ -16,7 +20,7 @@ const certs = [
     issuer: "HashiCorp",
     color: "from-[hsl(270,60%,50%)] to-[hsl(280,70%,60%)]",
     borderHover: "hover:border-[hsl(270,60%,50%)]/50",
-    icon: "🔷",
+    badge: terraformBadge,
     credentialId: "HashiCorp Certified",
   },
   {
@@ -24,7 +28,7 @@ const certs = [
     issuer: "IBM",
     color: "from-[hsl(210,80%,45%)] to-[hsl(220,70%,55%)]",
     borderHover: "hover:border-[hsl(210,80%,45%)]/50",
-    icon: "📊",
+    badge: ibmBadge,
     credentialId: "IBM Mastery Award",
   },
   {
@@ -32,7 +36,7 @@ const certs = [
     issuer: "CNCF / Linux Foundation",
     color: "from-[hsl(160,70%,40%)] to-[hsl(170,60%,50%)]",
     borderHover: "hover:border-[hsl(160,70%,40%)]/50",
-    icon: "⏳",
+    badge: ckadBadge,
     credentialId: "In preparation",
     inProgress: true,
   },
@@ -71,7 +75,11 @@ const CertificationsSection = () => {
 
               <div className="relative z-10">
                 <div className="flex items-start justify-between mb-4">
-                  <div className="text-4xl">{cert.icon}</div>
+                  <img
+                    src={cert.badge}
+                    alt={cert.name}
+                    className="w-16 h-16 object-contain"
+                  />
                   {"inProgress" in cert && cert.inProgress && (
                     <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-accent/15 text-accent border border-accent/30">
                       In preparation
