@@ -5,7 +5,6 @@ import { GraduationCap } from "lucide-react";
 const education = [
   { degree: "Master – Cloud & High Performance Computing", school: "ENSIAS", period: "2019 – 2021", location: "Rabat" },
   { degree: "Professional Degree – Information Systems & Big Data", school: "EST Salé", period: "2018 – 2019", location: "Salé" },
-  { degree: "Technician – IT Systems Development", school: "BTS Kenitra", period: "2016 – 2018", location: "Kenitra" },
 ];
 
 const EducationSection = () => {

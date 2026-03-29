@@ -15,6 +15,8 @@ const experiences = [
       "Created reusable Terraform modules for cloud infrastructure provisioning",
       "Centralized monitoring with Loki, Prometheus, and Grafana stack",
       "Managed infrastructure on OpenStack using Terraform and Ansible",
+      "Deployed GitLab, SonarQube, and Nexus using Terraform, Ansible, and Docker on OpenStack with HCP Terraform for remote state management",
+      "Deployed Alfresco GED on Kubernetes across multiple environments (Share, GED, SOLR, ActiveMQ, Transform Core)",
     ],
   },
   {
@@ -50,6 +52,14 @@ const projects = [
     title: "Infrastructure Automation on OpenStack",
     description: "Automated provisioning of compute, networking, and security components using Terraform and Ansible with reusable modules and GitLab pipelines.",
   },
+  {
+    title: "DevOps Toolchain Deployment – GitLab / SonarQube / Nexus",
+    description: "Deployed a full DevOps toolchain (GitLab, SonarQube, Nexus) on OpenStack using Terraform, Ansible, and Docker, with HCP Terraform for centralized remote state management.",
+  },
+  {
+    title: "Alfresco GED Deployment on Kubernetes",
+    description: "Deployed and managed Alfresco GED across multi-environment Kubernetes clusters, covering all core services: Share, GED, SOLR, ActiveMQ, and Transform Core.",
+  },
 ];
 
 const ExperienceSection = () => {
@@ -64,7 +74,7 @@ const ExperienceSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           className="text-center mb-16"
         >
-          <span className="font-mono text-sm text-primary">// career_path</span>
+          <span className="font-mono text-base font-semibold text-primary tracking-wide">// career_path</span>
           <h2 className="text-3xl md:text-4xl font-bold mt-2">Experience</h2>
         </motion.div>
 

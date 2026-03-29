@@ -4,20 +4,20 @@ import { Award, ExternalLink } from "lucide-react";
 
 const certs = [
   {
-    name: "Terraform Associate (004)",
-    issuer: "HashiCorp",
-    color: "from-[hsl(270,60%,50%)] to-[hsl(280,70%,60%)]",
-    borderHover: "hover:border-[hsl(270,60%,50%)]/50",
-    icon: "🏗️",
-    credentialId: "HashiCorp Certified",
-  },
-  {
     name: "Certified Kubernetes Administrator",
     issuer: "CNCF / Linux Foundation",
     color: "from-[hsl(210,90%,50%)] to-[hsl(200,80%,60%)]",
     borderHover: "hover:border-[hsl(210,90%,50%)]/50",
-    icon: "☸️",
+    icon: "🎖️",
     credentialId: "CKA Certified",
+  },
+  {
+    name: "Terraform Associate (004)",
+    issuer: "HashiCorp",
+    color: "from-[hsl(270,60%,50%)] to-[hsl(280,70%,60%)]",
+    borderHover: "hover:border-[hsl(270,60%,50%)]/50",
+    icon: "🔷",
+    credentialId: "HashiCorp Certified",
   },
   {
     name: "Big Data Engineer – Mastery Award",
@@ -26,6 +26,15 @@ const certs = [
     borderHover: "hover:border-[hsl(210,80%,45%)]/50",
     icon: "📊",
     credentialId: "IBM Mastery Award",
+  },
+  {
+    name: "Certified Kubernetes Application Developer",
+    issuer: "CNCF / Linux Foundation",
+    color: "from-[hsl(160,70%,40%)] to-[hsl(170,60%,50%)]",
+    borderHover: "hover:border-[hsl(160,70%,40%)]/50",
+    icon: "⏳",
+    credentialId: "In preparation",
+    inProgress: true,
   },
 ];
 
@@ -46,7 +55,7 @@ const CertificationsSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold mt-2">Professional Certifications</h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {certs.map((cert, i) => (
             <motion.div
               key={i}
@@ -61,7 +70,14 @@ const CertificationsSection = () => {
               <div className={`absolute inset-0 bg-gradient-to-br ${cert.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
 
               <div className="relative z-10">
-                <div className="text-4xl mb-4">{cert.icon}</div>
+                <div className="flex items-start justify-between mb-4">
+                  <div className="text-4xl">{cert.icon}</div>
+                  {"inProgress" in cert && cert.inProgress && (
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-accent/15 text-accent border border-accent/30">
+                      In preparation
+                    </span>
+                  )}
+                </div>
                 <div className="flex items-center gap-2 mb-1">
                   <Award size={14} className="text-primary" />
                   <span className="text-xs font-mono text-muted-foreground">{cert.issuer}</span>

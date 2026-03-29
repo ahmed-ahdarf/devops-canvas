@@ -43,7 +43,7 @@ const ContactSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           className="text-center mb-12"
         >
-          <span className="font-mono text-sm text-primary">// get_in_touch</span>
+          <span className="font-mono text-base font-semibold text-primary tracking-wide">// get_in_touch</span>
           <h2 className="text-3xl md:text-4xl font-bold mt-2">Contact Me</h2>
         </motion.div>
 

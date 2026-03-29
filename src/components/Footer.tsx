@@ -7,9 +7,6 @@ const Footer = () => (
         <Terminal size={14} className="text-primary" />
         <span>© {new Date().getFullYear()} Ahmed AHDARF</span>
       </div>
-      <p className="text-xs text-muted-foreground font-mono">
-        Built with React + Tailwind • Deployed with ❤️
-      </p>
     </div>
   </footer>
 );

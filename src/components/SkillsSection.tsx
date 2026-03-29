@@ -59,7 +59,7 @@ const SkillsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="font-mono text-sm text-primary">// tech_stack</span>
+          <span className="font-mono text-base font-semibold text-primary tracking-wide">// tech_stack</span>
           <h2 className="text-3xl md:text-4xl font-bold mt-2">Skills & Tools</h2>
           <p className="text-muted-foreground mt-3 max-w-xl mx-auto">
             Building and managing cloud-native infrastructure with modern DevOps tooling
